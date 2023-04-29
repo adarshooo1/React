@@ -1,0 +1,2 @@
+In this React Part 2, we just see that how a react + vite project established
+and how it make faster execution of the react code;
