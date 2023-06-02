@@ -1,0 +1,14 @@
+.ResumeHeader{
+  margin-left: 5px;
+}
+.ResumeHeader h1{
+  font-family:'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  font-weight: 550;
+}
+
+.ResumeHeader h2{
+  font-weight: 400;
+}
+
+/* Done */
