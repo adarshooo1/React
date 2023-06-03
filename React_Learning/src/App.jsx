@@ -1,29 +1,23 @@
 import React from "react";
 import "./App.css";
 import Video from "./components/Video";
+import videos from "./data/data";
 
 function App() {
   return (
     <div className="App">
-      <div>Welcome - Learning React</div>
-      <Video
-        title="React js Tutorial"
-        channel="ReactBusters"
-        views="200k"
-        time="1 year ago"
-      />
-      <Video
-        title="Node js Tutorial"
-        channel="NodeBlockers"
-        views="100k"
-        time="3 year ago"
-      />
-      <Video
-        title="Next js Tutorial"
-        channel="NextNextAndNext"
-        views="1.4M"
-        time="1 month ago"
-      />
+      <div>Videos</div>
+      {videos.map((video) => (
+        <Video
+          key={video.id}
+          id={video.id}
+          title={video.title}
+          channel={video.channel}
+          views={video.views}
+          time={video.time}
+          verified={video.verified}
+        />
+      ))}
     </div>
   );
 }

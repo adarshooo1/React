@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/InnerData.css';
+import "../styles/InnerData.css";
 
 const InnerData = ({ items }) => {
   const itemList = items.map((item, index) => <li key={index}>{item}</li>);
