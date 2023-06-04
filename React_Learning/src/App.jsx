@@ -2,11 +2,11 @@ import React from "react";
 import "./App.css";
 import Video from "./components/Video";
 import videos from "./data/data";
+import PlayButton from "./components/PlayButton";
 
 function App() {
   return (
     <div className="App">
-      <div>Videos</div>
       {videos.map((video) => (
         <Video
           key={video.id}
@@ -18,6 +18,11 @@ function App() {
           verified={video.verified}
         />
       ))}
+
+      <div style={{clear:"both"}}>
+      <PlayButton name="Play" message="Vedio Played"/>
+      <PlayButton name="Pause" message="Vedio Paused"/>
+      </div>
     </div>
   );
 }
