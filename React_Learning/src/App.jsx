@@ -6,7 +6,7 @@ import PlayButton from "./components/PlayButton";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" onClick={console.log("App")}>
       {videos.map((video) => (
         <Video
           key={video.id}
@@ -16,13 +16,15 @@ function App() {
           views={video.views}
           time={video.time}
           verified={video.verified}
-        />
+        >
+          <PlayButton
+            onPlay={() => console.log("Playing..", video.title)}
+            onPause={() => console.log("Paused..", video.title)}
+          >
+            {video.title}
+          </PlayButton>
+        </Video>
       ))}
-
-      <div style={{clear:"both"}}>
-      <PlayButton name="Play" message="Vedio Played"/>
-      <PlayButton name="Pause" message="Vedio Paused"/>
-      </div>
     </div>
   );
 }
