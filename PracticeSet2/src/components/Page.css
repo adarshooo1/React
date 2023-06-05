@@ -1,0 +1,55 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+.Container{
+    position: relative;
+    height: 70vh;
+    width: 80%;
+    background-color: rgb(223, 220, 220);
+    margin: auto;
+    margin-top: 60px;
+    padding-top: 12px;
+}
+
+div.ImageContainer{
+    width: 70%;
+    background-color: red;
+    margin: auto;
+    padding-top: 12px;
+}
+
+img{
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-left: 160px;
+}
+
+img:hover{
+    width: 430;
+    height: 350;;
+}
+
+.Holders{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 2px;
+}
+
+input{
+    margin-top: 8px;
+    margin-left: 76px;
+    height: 30px;
+    border-radius: 9px;
+    width: 20rem;
+    margin-right: 15px;
+    margin: auto;
+}
+button{
+    margin: auto;
+    border-radius: 7px;
+    height: 26px;
+    width: 4rem;
+    cursor: pointer;
+}
