@@ -4,6 +4,7 @@ import "./Page.css";
 function Page() {
   function handleClick(e) {
     e.preventDefault();
+    console.log("Submit button clicked");
   }
 
   function handleMouseOver() {
@@ -33,6 +34,13 @@ function Page() {
   const paste = (e) => {
     console.log(e.target.value);
   };
+
+  const keyDown = (e) => {
+    if (e.keyCode === 13) {
+      console.log("Enter pressed");
+    }
+  };
+
   return (
     <div className="Container">
       <form action="#">
@@ -52,9 +60,10 @@ function Page() {
             onFocus={focus}
             onBlur={blur}
             type="text"
+            onKeyDown={keyDown}
             placeholder="Enter your text"
           />
-          <button onClick={handleClick} type="submit">
+          <button onClick={handleClick} type="submit" onKeyDown={keyDown}>
             Submit
           </button>
         </div>
