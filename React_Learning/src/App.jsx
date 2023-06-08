@@ -5,8 +5,12 @@ import videos from "./data/data";
 import PlayButton from "./components/PlayButton";
 
 function App() {
+  const handleAppClick = () => {
+    console.log("App clicked");
+  };
+
   return (
-    <div className="App" onClick={console.log("App")}>
+    <div className="App" onClick={handleAppClick}>
       {videos.map((video) => (
         <Video
           key={video.id}
@@ -18,6 +22,8 @@ function App() {
           verified={video.verified}
         >
           <PlayButton
+            className="ply-btn"
+            // onClick = {handleAppClick}
             onPlay={() => console.log("Playing..", video.title)}
             onPause={() => console.log("Paused..", video.title)}
           >

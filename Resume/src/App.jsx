@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import './App.css'
 import Education from './components/Education';
 import Projects from './components/Projects';
+import PrintButton from './components/PrintButton';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Education />
       <Projects />
+      <PrintButton />
     </div>
   )
 }

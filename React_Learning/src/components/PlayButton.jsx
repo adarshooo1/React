@@ -4,7 +4,7 @@ function PlayButton({ children, onPlay, onPause }) {
   let playing = false;
   function handleClick(e) {
     // This will help in to prevent event Bubbling which disable other function to execute without any reason.
-    e.stopPropagation();
+    // e.stopPropagation();
   
     if (playing) {
       onPause();
