@@ -1,21 +1,22 @@
+import { useState } from "react";
 import "./PlayButton.css";
 
 function PlayButton({ children, onPlay, onPause }) {
-  let playing = false;
+  const [playing, setPlaying] = useState(false);
   function handleClick(e) {
     // This will help in to prevent event Bubbling which disable other function to execute without any reason.
-    // e.stopPropagation();
+    e.stopPropagation();
   
     if (playing) {
       onPause();
     } else {
       onPlay();
     }
-    playing = !playing;
+    setPlaying(!playing);
   }
   return (
     <button onClick={handleClick}>
-      {children} : {playing ? ">" : "||"}
+      {children} : {playing ? "⏸️" : "▶️"}
     </button>
   );
 }
