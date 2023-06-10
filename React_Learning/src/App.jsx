@@ -4,6 +4,7 @@ import Video from "./components/Video";
 import videoDB from "./data/data";
 import PlayButton from "./components/PlayButton";
 import Counter from "./components/counter";
+import Clock from "./components/Clock";
 
 function App() {
   const handleAppClick = () => {
@@ -13,6 +14,7 @@ function App() {
   const [videos, setVideos] = useState(videoDB);
   return (
     <div className="App" onClick={handleAppClick}>
+      <Clock/>
       <div>
         <button
           onClick={() => {
